@@ -137,7 +137,7 @@ Section
 */
 
 body {
-    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     font-size: 18px;
     color: hsl(0, 0%, 41%);
 }
@@ -164,8 +164,11 @@ a {
     text-decoration: none;
 }
 
-li {
+.nav-item-li {
+    font-size: initial;
+    font-weight: 500;
     padding: 10px 20px;
+
 }
 
 /*
@@ -182,14 +185,14 @@ Button
 }
 
 .btn-CTA {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
     background: hsl(0, 0%, 8%);
     color: hsl(0, 0%, 98%);
     border-style: none;
     border-radius: 13px;
     padding: 13px 25px;
-    margin-bottom: 80px;
+
 }
 
 a {
@@ -203,33 +206,35 @@ a:hover {
 .CTA {
     display: inline-block;
     /* max-width: 574.5px; */
-    /* padding-left: 50px; */
-    padding-right: 50px;
+    padding-left: 60px;
+    /* padding-right: 50px; */
 }
 
 .hero-block {
     padding: 25px 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: end;
 }
 
 .hero-img {
-    max-width: 350px;
+    max-width: 375px;
     padding-left: 100px;
+    padding-right: 10px;
 }
 
 .brands {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 70px;
 }
 
 
 
 h1 {
     color: hsl(0, 0%, 8%);
-    font-size: 48px;
+    font-size: 78px;
     font-weight: 700;
     padding-bottom: 40px;
 
@@ -239,6 +244,7 @@ p {
     max-width: 420px;
     padding-bottom: 40px;
     line-height: 1.5;
+    font-weight: 500;
 }
 
 .attribution {
@@ -248,4 +254,8 @@ p {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.feature-li {
+    display: none;
 }

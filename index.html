@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images\favicon-32x32.png" type="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 
@@ -16,15 +21,22 @@
 
             <div class="nav-menu-li">
                 <ul class="nav-items">
-                    <li><a href="">Features <img src="images/icon-arrow-down.svg" alt=""> </a></li>
-                    <li><a href="">Company <img src="images/icon-arrow-down.svg" alt=""></a></li>
-                    <li><a href="">Careers</a></li>
-                    <li><a href="">About</a></li>
+                    <li class="nav-item-li"><a href="">Features <img src="images/icon-arrow-down.svg" alt=""> </a>
+                        <ul class="feature-li">
+                            <li class="feature"><a href="#">todo</a></li>
+                            <li class="feature"><a href="#">Calender</a></li>
+                            <li class="feature"><a href="#">Reminder</a></li>
+                            <li class="feature"><a href="#">Planning</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-li"><a href="">Company <img src="images/icon-arrow-down.svg" alt=""></a></li>
+                    <li class="nav-item-li"><a href="">Careers</a></li>
+                    <li class="nav-item-li"><a href="">About</a></li>
                 </ul>
 
                 <ul class="user-access">
-                    <li><a href="">Login</a></li>
-                    <li class="btn btn-nav"><a href="">Register</a></li>
+                    <li class="nav-item-li"><a href="">Login</a></li>
+                    <li class="nav-item-li btn btn-nav"><a href="">Register</a></li>
                 </ul>
             </div>
 
@@ -35,10 +47,10 @@
         <section class="hero">
             <div class="hero-block">
                 <div class="CTA">
-                    <h1> Make <br> remote work</h1>
+                    <h1 id="heading"> {{heading}}</h1>
 
-                    <p>Get your team in sync, no matter your location. Streamline processes,
-                        create team rituals, and watch productivity soar.</p>
+                    <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and
+                        watch productivity soar.</p>
 
                     <button class="btn-CTA">Learn more</button>
 
@@ -57,11 +69,13 @@
 
 
 
-    <script src="main.js"></script>
+
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="https://www.linkedin.com/in/itsgozie/">Gozie Lekwuwa</a>.
     </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
