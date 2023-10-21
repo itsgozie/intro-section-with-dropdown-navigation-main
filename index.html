@@ -10,11 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 
-<body>
+<body v-cloak>
     <header>
         <nav>
             <img src="images\logo.svg" class="logo" alt="Brand logo">
@@ -29,9 +28,11 @@
                             <li class="feature"><a href="#">Planning</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-li"><a href="">Company <img src="images/icon-arrow-down.svg" alt=""></a></li>
-                    <li class="nav-item-li"><a href="">Careers</a></li>
-                    <li class="nav-item-li"><a href="">About</a></li>
+                    <li class="nav-item-li"><a :href="url[0].home">{{urlName[0]}}<img src="images/icon-arrow-down.svg"
+                                alt=""></a>
+                    </li>
+                    <li class="nav-item-li"><a :href="url[0].about">{{urlName[1]}}</a></li>
+                    <li class="nav-item-li"><a :href="url[0].pricing">{{urlName[2]}}</a></li>
                 </ul>
 
                 <ul class="user-access">
@@ -47,12 +48,12 @@
         <section class="hero">
             <div class="hero-block">
                 <div class="CTA">
-                    <h1 id="heading"> {{heading}}</h1>
+                    <h1 id="heading">{{ heroHeading() }}</h1>
 
                     <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and
                         watch productivity soar.</p>
 
-                    <button class="btn-CTA">Learn more</button>
+                    <button id='btn' class="btn-CTA">Learn more</button>
 
                     <div class="brands">
                         <img class="brand-logo" src="images\client-databiz.svg" alt="data biz logo">
@@ -74,7 +75,7 @@
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="https://www.linkedin.com/in/itsgozie/">Gozie Lekwuwa</a>.
     </div>
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="main.js"></script>
 </body>
 

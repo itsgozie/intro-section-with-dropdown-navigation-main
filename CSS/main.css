@@ -259,3 +259,7 @@ p {
 .feature-li {
     display: none;
 }
+
+[v-cloak] {
+    display: none;
+}
